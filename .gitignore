@@ -1,0 +1,11 @@
+*.gz
+
+*.out
+
+*.log
+
+*.aux
+
+.DS_Store
+*.blg
+*.bbl
