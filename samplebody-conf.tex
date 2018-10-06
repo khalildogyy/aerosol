@@ -33,17 +33,20 @@ The existence of IR must meet the needs of all parties involved. For this system
 
 The current literature data of this aerosol knowledge base covers 75 core aerosol-related journals, with more than 13,000 aerosol-related literature data and more than 100,000 abstract data. The paper data covers China, South Korea, Japan, India, Africa, the United States and other countries and continents, as shown in Figure 1.
 
-\begin{figure}
-	\includegraphics{fly}
-	\caption{Paper distribution in world map.}
-\end{figure}
-
 In China, the data covers Beijing, Chongqing, Xinjiang, Jiangsu Province, Anhui Province, Taiwan Province, Guangdong Province, Hubei Province, Guizhou Province, Gansu Province, and Shaanxi Province, as shown in Figure 2.
 
-\begin{figure}
-	\includegraphics{fly}
-	\caption{Paper distribution in chinese map.}
-\end{figure}
+\begin{figure*}
+	\centering
+	\subfigure[World Map]{
+		\label{fig:violin:PA}
+		\includegraphics[width=0.45\textwidth]{pic1.pdf}
+	}
+	\subfigure[China Map]{
+		\label{fig:violin:PB}
+		\includegraphics[width=0.45\textwidth]{pic2.pdf}
+	}
+\caption{Subscale.}
+\end{figure*}
 
 
 \section{KNOWLEDGE SERVICE}
@@ -65,7 +68,7 @@ For this survey, we got a lot of important responses and suggestions. In the pro
 \begin{table}
 	\caption{Tentative Function Points Questionnaire}
 	\label{tab:freq}
-	\begin{tabular}{ccl}
+	\begin{tabular}{ll}
 		\toprule
 		Functions&Proportion\\
 		\midrule
@@ -84,7 +87,7 @@ In order to further deepen the user's needs and determine the system functions, 
 Face-to-face user interviews were conducted with a group of 10 people (the same professional). We will first set up different aerosol literature knowledge related project questions based on volunteer career information, record the problem solving needs through the discussion between volunteers, and let the volunteers click on the importance of the functions we selected before. The scale is shown in Figure 3:
 
 \begin{figure*}
-	\includegraphics[width=0.8\textwidth]{pic1.pdf}
+	\includegraphics[width=0.8\textwidth]{pic3.pdf}
 	\caption{Subscale.}
 \end{figure*}
 
@@ -93,7 +96,7 @@ Based on the interview results and the scoring statistics, we removed the “pap
 \begin{table}
 	\caption{Final Function Point and Scoring Result}
 	\label{tab:freq}
-	\begin{tabular}{ccl}
+	\begin{tabular}{ll}
 		\toprule
 		Functions&Score Result\\
 		\midrule
@@ -108,170 +111,72 @@ Based on the interview results and the scoring statistics, we removed the “pap
 	\end{tabular}
 \end{table}
 
+\subsection{System Function}
+\subsubsection{Keyword Position}
+Enter the query keyword, the system will search all the documents in the database, and output all the document information containing the keywords in descending order, click to view the documents, and automatically locate the fields of the searched keywords. As shown in Figure 4.
 
-\subsection{Tables}
-Because tables cannot be split across pages, the best
-placement for them is typically the top of the page
-nearest their initial cite.  To
-ensure this proper ``floating'' placement of tables, use the
-environment \textbf{table} to enclose the table's contents and
-the table caption.  The contents of the table itself must go
-in the \textbf{tabular} environment, to
-be aligned properly in rows and columns, with the desired
-horizontal and vertical rules.  Again, detailed instructions
-on \textbf{tabular} material
-are found in the \textit{\LaTeX\ User's Guide}.
+\subsubsection{Subject Classification}
+Users can upload documents, the system will accurately locate the document level and category, and inform the document subject classification. According to the similarity of the topic, the relevant literature is recommended for the user. The user can click to view the recommended documents. As shown in Figure 5.
 
-Immediately following this sentence is the point at which
-Table~\ref{tab:freq} is included in the input file; compare the
-placement of the table here with the table in the printed
-output of this document.
+\subsubsection{Paper Check}
+Users can upload his own document and the system will upload the PDF document as the target file, perform data preprocessing such as word segmentation and deactivation, and convert it into a txt file, compare the similarity with other documents in the library, and feedback the user and upload the document. Similar published literature, users can click to view the literature, the system will automatically locate similar fields in the literature, which is convenient for users to view. As shown in Figure 6.
+
+\subsubsection{Paper evaluation}
+When users upload a manuscript written by themselves, the system will use the uploaded PDF document or the submitted paper information as the target files,  and compare them with the published papers or the more influential papers in the library. Finally, feedback the level of the user's target paper and recommend the corresponding excellent papers.
+
+\subsubsection{Data visualization}
+... As shown in Figure 7.
+
+
+\section{CROWDSOURCING AND DATA EXPANSION}
+As system users continue to grow and data continues to emerge, data update iterations are a major issue that needs to be addressed. In the subsequent data collection and update of the knowledge service system in this document, we adopted a crowdsourcing method and proposed a new formatted data submission method to combine crowdsourcing submission data with data formatting storage and data analysis to achieve perfect knowledge. The role of the library and feedback user data information to ensure the update and expansion of the database.
+
+\subsection{Parameter Setting}
+After discussing with the graduate students of the Optoelectronics College Collaborative Laboratory, we designed a questionnaire experiment. The subjects were 30 graduate students in the School of Optoelectronics. The questionnaire was divided into five parts: literature publication information, aerosol basic information, optical parameter information, spatio-temporal information, and particle microphysical characteristics. The subjects were required to give these five parts separately. I think that an aerosol data related literature may contain important attributes. We compiled and merged the attributes of the 30 questionnaires collected. The results of the questionnaire included preliminary 28 attributes that would cover the important information needed. To increase the scalability, we added a “Remarks” attribute to each category. For the recording of other possible additional information, the total attribute is 33 as a paradigm preliminary attribute option, as shown in Figure 9.
+
+In the follow-up, we further interviewed experts and scholars in the field of aerosols, taking into account the importance of the data and the clarity of the records. Finally, the attributes included in the paradigm were determined to be 17 and the four categories except the published information were combined. Into the data, the attributes contained in the paradigm are divided into article attributes and data attributes in the large class. As shown in Tables 4 and 5.
 
 \begin{table}
-	\caption{Frequency of Special Characters}
+	\caption{Article Attribute.}
 	\label{tab:freq}
-	\begin{tabular}{ccl}
+	\begin{tabular}{ll}
 		\toprule
-		Non-English or Math&Frequency&Comments\\
+		Article Attribute&Content\\
 		\midrule
-		\O & 1 in 1,000& For Swedish names\\
-		$\pi$ & 1 in 5& Common in math\\
-		\$ & 4 in 5 & Used in business\\
-		$\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
+		Journal & 75 journal options\\
+		DOI & Unique Number of article\\
+		Paper Name & Full name of the document\\
+		Author & Corresponding author\\
+		Unit & Company or school\\
+		Tool & Observation, simulation\\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
-To set a wider table, which takes up the whole width of the page's
-live area, use the environment \textbf{table*} to enclose the table's
-contents and the table caption.  As with a single-column table, this
-wide table will ``float'' to a location deemed more desirable.
-Immediately following this sentence is the point at which
-Table~\ref{tab:commands} is included in the input file; again, it is
-instructive to compare the placement of the table here with the table
-in the printed output of this document.
-
-
 \begin{table*}
-	\caption{Some Typical Commands}
-	\label{tab:commands}
-	\begin{tabular}{ccl}
+	\caption{Data Attribute.}
+	\label{tab:freq}
+	\begin{tabular}{lp{0.7\textwidth}}
 		\toprule
-		Command &A Number & Comments\\
+		Data Attribute&Content\\
 		\midrule
-		\texttt{{\char'134}author} & 100& Author \\
-		\texttt{{\char'134}table}& 300 & For tables\\
-		\texttt{{\char'134}table*}& 400& For wider tables\\
+		Key Physics Parameters & Lidar ratio, depolarization ratio, backscatter coefficient, extinction coefficient, optical depth, depolarization spectral ratio, color ratio, angstrom exponents\\
+		Aerosol Type & Dust, smoke, clean continental, polluted continental, polluted dust, clean marine\\
+		Method & Observation, retrival\\
+		Laser Wavelength & 355, 440, 532, 645, 780, 870, 1020, 1540\\
+		Address & Country, province, city\\
+		Address Note & Such as a foreign country, the country specific to the school, latitude and longitude and other information\\
+		Time & Year, month, day\\
+		Time Note & Time interval\\
+		Mean & Optical parameter average, decimal form\\
+		Standard deviation & Optical parameter standard deviation, decimal form\\
+		Value note & Data Interval\\
 		\bottomrule
 	\end{tabular}
 \end{table*}
-% end the environment with {table*}, NOTE not {table}!
 
-It is strongly recommended to use the package booktabs~\cite{Fear05}
-and follow its main principles of typography with respect to tables:
-\begin{enumerate}
-	\item Never, ever use vertical rules.
-	\item Never use double rules.
-\end{enumerate}
-It is also a good idea not to overuse horizontal rules.
+\subfigure{Web Design}
 
-
-\subsection{Figures}
-
-Like tables, figures cannot be split across pages; the best placement
-for them is typically the top or the bottom of the page nearest their
-initial cite.  To ensure this proper ``floating'' placement of
-figures, use the environment \textbf{figure} to enclose the figure and
-its caption.
-
-This sample document contains examples of \texttt{.eps} files to be
-displayable with \LaTeX.  If you work with pdf\LaTeX, use files in the
-\texttt{.pdf} format.  Note that most modern \TeX\ systems will convert
-\texttt{.eps} to \texttt{.pdf} for you on the fly.  More details on
-each of these are found in the \textit{Author's Guide}.
-
-\begin{figure}
-	\includegraphics{fly}
-	\caption{A sample black and white graphic.}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[height=1in, width=1in]{fly}
-	\caption{A sample black and white graphic
-		that has been resized with the \texttt{includegraphics} command.}
-\end{figure}
-
-
-As was the case with tables, you may want a figure that spans two
-columns.  To do this, and still to ensure proper ``floating''
-placement of tables, use the environment \textbf{figure*} to enclose
-the figure and its caption.  And don't forget to end the environment
-with \textbf{figure*}, not \textbf{figure}!
-
-\begin{figure*}
-	\includegraphics{flies}
-	\caption{A sample black and white graphic
-		that needs to span two columns of text.}
-\end{figure*}
-
-
-\begin{figure}
-	\includegraphics[height=1in, width=1in]{rosette}
-	\caption{A sample black and white graphic that has
-		been resized with the \texttt{includegraphics} command.}
-\end{figure}
-
-\subsection{Theorem-like Constructs}
-
-Other common constructs that may occur in your article are the forms
-for logical constructs like theorems, axioms, corollaries and proofs.
-ACM uses two types of these constructs:  theorem-like and
-definition-like.
-
-Here is a theorem:
-\begin{theorem}
-	Let $f$ be continuous on $[a,b]$.  If $G$ is
-	an antiderivative for $f$ on $[a,b]$, then
-	\begin{displaymath}
-	\int^b_af(t)\,dt = G(b) - G(a).
-	\end{displaymath}
-\end{theorem}
-
-Here is a definition:
-\begin{definition}
-	If $z$ is irrational, then by $e^z$ we mean the
-	unique number that has
-	logarithm $z$:
-	\begin{displaymath}
-	\log e^z = z.
-	\end{displaymath}
-\end{definition}
-
-The pre-defined theorem-like constructs are \textbf{theorem},
-\textbf{conjecture}, \textbf{proposition}, \textbf{lemma} and
-\textbf{corollary}.  The pre-defined de\-fi\-ni\-ti\-on-like constructs are
-\textbf{example} and \textbf{definition}.  You can add your own
-constructs using the \textsl{amsthm} interface~\cite{Amsthm15}.  The
-styles used in the \verb|\theoremstyle| command are \textbf{acmplain}
-and \textbf{acmdefinition}.
-
-Another construct is \textbf{proof}, for example,
-
-\begin{proof}
-	Suppose on the contrary there exists a real number $L$ such that
-	\begin{displaymath}
-	\lim_{x\rightarrow\infty} \frac{f(x)}{g(x)} = L.
-	\end{displaymath}
-	Then
-	\begin{displaymath}
-	l=\lim_{x\rightarrow c} f(x)
-	= \lim_{x\rightarrow c}
-	\left[ g{x} \cdot \frac{f(x)}{g(x)} \right ]
-	= \lim_{x\rightarrow c} g(x) \cdot \lim_{x\rightarrow c}
-	\frac{f(x)}{g(x)} = 0\cdot L = 0,
-	\end{displaymath}
-	which contradicts our assumption that $l\neq 0$.
-\end{proof}
 
 \section{Conclusions}
 This paragraph will end the body of this sample document.
