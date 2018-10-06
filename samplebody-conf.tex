@@ -39,11 +39,11 @@ In China, the data covers Beijing, Chongqing, Xinjiang, Jiangsu Province, Anhui 
 	\centering
 	\subfigure[World Map]{
 		\label{fig:violin:PA}
-		\includegraphics[width=0.45\textwidth]{pic1.pdf}
+		\includegraphics[width=0.45\textwidth]{figures/pic1.pdf}
 	}
 	\subfigure[China Map]{
 		\label{fig:violin:PB}
-		\includegraphics[width=0.45\textwidth]{pic2.pdf}
+		\includegraphics[width=0.45\textwidth]{figures/pic2.pdf}
 	}
 \caption{Subscale.}
 \end{figure*}
@@ -87,7 +87,7 @@ In order to further deepen the user's needs and determine the system functions, 
 Face-to-face user interviews were conducted with a group of 10 people (the same professional). We will first set up different aerosol literature knowledge related project questions based on volunteer career information, record the problem solving needs through the discussion between volunteers, and let the volunteers click on the importance of the functions we selected before. The scale is shown in Figure 3:
 
 \begin{figure*}
-	\includegraphics[width=0.8\textwidth]{pic3.pdf}
+	\includegraphics[width=0.8\textwidth]{figures/pic3.pdf}
 	\caption{Subscale.}
 \end{figure*}
 
@@ -175,20 +175,64 @@ In the follow-up, we further interviewed experts and scholars in the field of ae
 	\end{tabular}
 \end{table*}
 
-\subfigure{Web Design}
+\subsection{Web Design}
+The system uses the eight keywords of lidar ratio, depolarization ratio, backscatter cofficient, extinction cofficient, optical depth, depolarization spectral ratio, color ratio, angstrom exponents to guide the document information from Journal, DOI, Type, Method and so on. Extract and fill in the submission database. The specific web page information is shown in Figure 8.
+
+In terms of user experience, in order to save user data filling time, we set the thesaurus function, set the drop-down options in multiple options such as Journal, Instrument, Type, and province cities, users can click to complete. In terms of data security, the system will automatically save the user to fill in the data to avoid data loss caused by webpage error shutdown, network disconnection and other reasons. The specifics of the user interaction experience will be covered in Section 6.
+
+\begin{figure}
+	\includegraphics[width=0.4\textwidth]{figures/pic8.pdf}
+	\caption{Website navigation.}
+\end{figure}
+
+\subsection{Crowdsourcing task organization method}
+We submit data through invitations and autonomy.
+
+By sending an email to invite experts and scholars in the aerosol field, journals and journals to submit the data of the published papers on the crowdsourcing submission page of the system, this will help improve the accuracy of the system's "paper evaluation" function. According to the format paradigm of excellent papers, we can judge the grades and advantages and disadvantages of the evaluation documents submitted by users.
+
+Student users can get convenience from the system. After publishing the paper, we encourage and very welcome users to submit data independently and help the system to expand data.
+
+\subsection{Automatic system update}
+In addition to the background staff uploading the document data, the background of the system will automatically detect the recent literature update of each data platform, the crawler automatically downloads the document information and the abstract, promptly reminds the background personnel to update the data.
+
+\section{USER STUDY}
+We conducted an experimental test of the experience of the website. We invite volunteers who have participated in the questionnaires and interviews, as well as volunteers who have not participated in the activities related to the system, and provide us with feedback. The URL system function diagram is shown in Figure 9.
+
+\begin{figure}
+	\includegraphics[width=0.4\textwidth]{figures/pic9.pdf}
+	\caption{Crowdsourcing submission page.}
+\end{figure}
+
+\subsection{System usability and usability test}
+We convened the subjects who had previously interviewed to complete the system's usability and usability tests. The experimenter will experience the various functions of the system by looking up the paper information. Since our system is aimed at the field of photoelectrosols, our subjects were also professionals in the field of interviews.
+
+Similarly, we use the subscale to let users rate the system's ease of use and usability, and make recommendations for system layout. The system usage is shown in Table 6.
+
+\begin{table}
+	\caption{Article Attribute.}
+	\label{tab:freq}
+	\begin{tabular}{ll}
+		\toprule
+		Article Attribute&Content\\
+		\midrule
+		Journal & 75 journal options\\
+		DOI & Unique Number of article\\
+		Paper Name & Full name of the document\\
+		Author & Corresponding author\\
+		Unit & Company or school\\
+		Tool & Observation, simulation\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\subsection{System time-saving test}
+... ...
 
 
 \section{Conclusions}
-This paragraph will end the body of this sample document.
-Remember that you might still have Acknowledgments or
-Appendices; brief samples of these
-follow.  There is still the Bibliography to deal with; and
-we will make a disclaimer about that here: with the exception
-of the reference to the \LaTeX\ book, the citations in
-this paper are to articles which have nothing to
-do with the present subject and are used as
-examples only.
-%\end{document}  % This is where a 'short' article might terminate
+This paper proposes a new method of data collection, storage, collation, analysis and presentation of literature, and develops a paradigm analysis and crowdsourced aerosol literature knowledge service system, which provides an effective means for collecting aerosol historical observation data and provides users with A variety of aerosol literature knowledge service functions.
+
+At present, the system functions need to be improved. The system interaction and user experience need to be considered from the user's point of view. Through more tests, the system efficiency is improved.
 
 
 \begin{acks}
