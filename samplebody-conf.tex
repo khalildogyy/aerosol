@@ -39,11 +39,11 @@ In China, the data covers Beijing, Chongqing, Xinjiang, Jiangsu Province, Anhui 
 	\centering
 	\subfigure[World Map]{
 		\label{fig:violin:PA}
-		\includegraphics[width=0.45\textwidth]{figures/pic1.pdf}
+		\includegraphics[width=0.4\textwidth]{figures/pic1a.pdf}
 	}
 	\subfigure[China Map]{
 		\label{fig:violin:PB}
-		\includegraphics[width=0.45\textwidth]{figures/pic2.pdf}
+		\includegraphics[width=0.4\textwidth]{figures/pic1b.pdf}
 	}
 \caption{Subscale.}
 \end{figure*}
@@ -86,10 +86,11 @@ In order to further deepen the user's needs and determine the system functions, 
 
 Face-to-face user interviews were conducted with a group of 10 people (the same professional). We will first set up different aerosol literature knowledge related project questions based on volunteer career information, record the problem solving needs through the discussion between volunteers, and let the volunteers click on the importance of the functions we selected before. The scale is shown in Figure 3:
 
-\begin{figure*}
-	\includegraphics[width=0.8\textwidth]{figures/pic3.pdf}
-	\caption{Subscale.}
-\end{figure*}
+\begin{figure}
+	\includegraphics[width=0.45\textwidth]{figures/pic2.pdf}
+	\caption{Servqual.}
+\end{figure}
+
 
 Based on the interview results and the scoring statistics, we removed the “paper template” function points obtained through the questionnaire, and added the “data visualization” function points obtained through focus group interviews. The final score and the determined function points are shown in Table 3:
 
@@ -112,20 +113,55 @@ Based on the interview results and the scoring statistics, we removed the “pap
 \end{table}
 
 \subsection{System Function}
-\subsubsection{Keyword Position}
+Open the web page and enter the main page, as shown in Figure 3.
+The system home page has 5 function entries, including:Information Search;Subject Classification;Data Crowdsourcing;Paper Check;Paper Evaluation.
+
+Click the icon to go to the feature page. The system background image is updated randomly each time the user refreshes the main page.
+The specific function operation is as follows.
+\begin{figure}
+	\includegraphics[width=0.35\textwidth]{figures/pic3.png}
+	\caption{Main page.}
+\end{figure}
+
+\subsubsection{Information Search}
 Enter the query keyword, the system will search all the documents in the database, and output all the document information containing the keywords in descending order, click to view the documents, and automatically locate the fields of the searched keywords. As shown in Figure 4.
+\begin{figure}
+	\includegraphics[width=0.35\textwidth]{figures/pic4.png}
+	\caption{Information search.}
+\end{figure}
 
 \subsubsection{Subject Classification}
 Users can upload documents, the system will accurately locate the document level and category, and inform the document subject classification. According to the similarity of the topic, the relevant literature is recommended for the user. The user can click to view the recommended documents. As shown in Figure 5.
+\begin{figure}
+	\includegraphics[width=0.35\textwidth]{figures/pic5.png}
+	\caption{Subject classification.}
+\end{figure}
 
 \subsubsection{Paper Check}
 Users can upload his own document and the system will upload the PDF document as the target file, perform data preprocessing such as word segmentation and deactivation, and convert it into a txt file, compare the similarity with other documents in the library, and feedback the user and upload the document. Similar published literature, users can click to view the literature, the system will automatically locate similar fields in the literature, which is convenient for users to view. As shown in Figure 6.
+\begin{figure}
+	\includegraphics[width=0.35\textwidth]{figures/pic6.png}
+	\caption{Paper check.}
+\end{figure}
 
-\subsubsection{Paper evaluation}
-When users upload a manuscript written by themselves, the system will use the uploaded PDF document or the submitted paper information as the target files,  and compare them with the published papers or the more influential papers in the library. Finally, feedback the level of the user's target paper and recommend the corresponding excellent papers.
+\subsubsection{Data Crowdsourcing}
+See the next section for details.
 
-\subsubsection{Data visualization}
-... As shown in Figure 7.
+\subsubsection{Paper Evaluation}
+When users upload a manuscript written by themselves, the system will use the uploaded PDF document or the submitted paper information as the target files,  and compare them with the published papers or the more influential papers in the library. Finally, feedback the level of the user's target paper and recommend the corresponding excellent papers.As shown in Figure 7.
+\begin{figure}
+	\centering
+	\subfigure[Data submission]{
+		\label{fig:violin:PA}
+		\includegraphics[width=0.35\textwidth]{figures/pic8a.png}
+	}
+	\subfigure[Evaluation result]{
+		\label{fig:violin:PB}
+		\includegraphics[width=0.35\textwidth]{figures/pic8b.png}
+	}
+	\caption{(a) In the [Data info] list, the user needs to fill the list with  aerosol parameter type, Method, Instrument, Location, Time, Time-tip (such as a certain time period, a certain season, etc.), Wavelength, Deviation, Value (parameter other Values, such as Mean\_value, etc.). In addition to the Time-tip and Deviation options, the rest are required information items.
+	(b) On the right side of the interface, the system will give a rating item, including:Overall score; paper category; recommended journal: give the name of the journal that best meets the submission; document repeatability: list the top five documents with the highest similarity to the uploaded paper in the whole library, sorted in descending order of similarity; : Compare the paper format with the existing paper format template in the database to determine whether it meets the requirements.}
+\end{figure}
 
 
 \section{CROWDSOURCING AND DATA EXPANSION}
@@ -181,7 +217,7 @@ The system uses the eight keywords of lidar ratio, depolarization ratio, backsca
 In terms of user experience, in order to save user data filling time, we set the thesaurus function, set the drop-down options in multiple options such as Journal, Instrument, Type, and province cities, users can click to complete. In terms of data security, the system will automatically save the user to fill in the data to avoid data loss caused by webpage error shutdown, network disconnection and other reasons. The specifics of the user interaction experience will be covered in Section 6.
 
 \begin{figure}
-	\includegraphics[width=0.4\textwidth]{figures/pic8.pdf}
+	\includegraphics[width=0.35\textwidth]{figures/pic7.png}
 	\caption{Website navigation.}
 \end{figure}
 
@@ -196,12 +232,7 @@ Student users can get convenience from the system. After publishing the paper, w
 In addition to the background staff uploading the document data, the background of the system will automatically detect the recent literature update of each data platform, the crawler automatically downloads the document information and the abstract, promptly reminds the background personnel to update the data.
 
 \section{USER STUDY}
-We conducted an experimental test of the experience of the website. We invite volunteers who have participated in the questionnaires and interviews, as well as volunteers who have not participated in the activities related to the system, and provide us with feedback. The URL system function diagram is shown in Figure 9.
-
-\begin{figure}
-	\includegraphics[width=0.4\textwidth]{figures/pic9.pdf}
-	\caption{Crowdsourcing submission page.}
-\end{figure}
+We conducted an experimental test of the experience of the website. We invite volunteers who have participated in the questionnaires and interviews, as well as volunteers who have not participated in the activities related to the system, and provide us with feedback.
 
 \subsection{System usability and usability test}
 We convened the subjects who had previously interviewed to complete the system's usability and usability tests. The experimenter will experience the various functions of the system by looking up the paper information. Since our system is aimed at the field of photoelectrosols, our subjects were also professionals in the field of interviews.
